@@ -3,7 +3,7 @@
 ## Include script to HTML
 
 ```html
-    <script src="translate.js"></script>
+<script src="translate.js"></script>
 ```
 
 ## Declare translations

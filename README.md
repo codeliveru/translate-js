@@ -7,12 +7,12 @@
 ```javascript
 var translated = tr('success:comment:add');
 ```
-Or with custom language
+Or
 
 ```javascript
 var translated = tr('success:comment:edit', 'ru_RU');
-    
 ```
+
 ### Define translations
 
 ```javascript

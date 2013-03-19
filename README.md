@@ -1,34 +1,32 @@
-# Demo
-
-[View demo](example.html)
-
-
-### Define translations
+## Define translations
 
 ```javascript
-var messages = {};
-messages.en_US = {
-    success: {
-        comment: {
-            add: 'Your comment has been added successfully',
-            remove: 'Your comment has been removed',
-            edit: 'Your comment has been updated'
-        },
-        feedback: {
-            send: 'Your feedback successfully send to administrator',
-            receive: 'New response for your feedback has been received'
+var messages = {
+    en_US = {
+        success: {
+            comment: {
+                add: 'Your comment has been added successfully',
+                remove: 'Your comment has been removed',
+                edit: 'Your comment has been updated'
+            },
+            feedback: {
+                send: 'Your feedback successfully send to administrator',
+                receive: 'New response for your feedback has been received'
+            }
         }
     }
 };
 ```
 
-### Setup default language
+## Setup default language
 
+```javascript
 var settings = {
     lang: 'en_US'
 };
+```
 
-### Translate
+## Translate
 
 With default language:
 

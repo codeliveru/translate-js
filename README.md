@@ -1,5 +1,3 @@
-# Usage:
-
 ## Include script to HTML
 
 ```html

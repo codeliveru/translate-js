@@ -1,4 +1,5 @@
-## Define translations
+# Usage
+## Declare translations
 
 ```javascript
 var messages = {
@@ -18,7 +19,7 @@ var messages = {
 };
 ```
 
-## Setup default language
+## Setup the default language
 
 ```javascript
 var settings = {

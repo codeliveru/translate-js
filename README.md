@@ -6,10 +6,7 @@
 ### Define translations
 
 ```javascript
-var settings = {}, messages = {};
-settings.lang = 'en_US';
-
-/* English translations */
+var messages = {};
 messages.en_US = {
     success: {
         comment: {
@@ -20,26 +17,16 @@ messages.en_US = {
         feedback: {
             send: 'Your feedback successfully send to administrator',
             receive: 'New response for your feedback has been received'
-        },
-    },
-    error: {
-        comment: {
-            add: 'Cannot to add your commend',
-            remove: 'Cannot delete your comment',
-            edit: 'Cannot update your comment',
-        },
-        feedback: {
-            send: 'Cannot to send your feedback',
-            receive: 'Cannot to read the received message',
         }
-    },
-    action: {
-        hide: 'Hide',
-        show: 'Show'
     }
 };
-/* End English translations */
 ```
+
+### Setup default language
+
+var settings = {
+    lang: 'en_US'
+};
 
 ### Translate
 

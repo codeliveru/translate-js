@@ -1,4 +1,11 @@
-# Usage
+# Usage:
+
+## Include script to HTML
+
+```html
+    <script src="translate.js"></script>
+```
+
 ## Declare translations
 
 ```javascript

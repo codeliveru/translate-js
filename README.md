@@ -2,16 +2,6 @@
 
 [View demo](example.html)
 
-### Translation
-
-```javascript
-var translated = tr('success:comment:add');
-```
-Or
-
-```javascript
-var translated = tr('success:comment:edit', 'ru_RU');
-```
 
 ### Define translations
 
@@ -49,35 +39,18 @@ messages.en_US = {
     }
 };
 /* End English translations */
+```
 
-/* Russian translations */
-messages.ru_RU = {
-    success: {
-        comment: {
-            add: 'Комментарий успешно добавлен',
-            remove: 'Комментарий успешно удален',
-            edit: 'Комментарий успешно отредактирован'
-        },
-        feedback: {
-            send: 'Письмо успешно отправлено администратору',
-            receive: 'Получен новый ответ на сообщение обратной связи',
-        },
-    },
-    error: {
-        comment: {
-            add: 'Произошла ошибка при добавлении комментария',
-            remove: 'Произошла ошибка при удалении комментария',
-            edit: 'Не удалось отредактировать комментарий'
-        },
-        feedback: {
-            send: 'Не удалось отправить письмо',
-            receive: 'Не удалось прочитать полученное сообщение',
-        }
-    },
-    action: {
-        hide: 'Скрыть',
-        show: 'Показать'
-    }
-};
-// End Russian translations */
+### Translate
+
+With default language:
+
+```javascript
+var translated = tr('success:comment:add');
+```
+
+With custom language:
+
+```javascript
+var translated = tr('success:comment:edit', 'ru_RU');
 ```

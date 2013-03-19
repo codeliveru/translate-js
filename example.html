@@ -2,56 +2,84 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>translate-js demo examples</title>
-        <script src="./example.js"></script>
-        <script src="./translate.js"></script>
+        <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+        </style>
     </head>
     <body>
-        <h1>Translate-js</h1>
-        <form name="translate-form" id="id_translate_form" action="#">
-            <label for="id_params">Translate:</label>
-            <select id="id_params" name="params">
-                <optgroup label="Comment">
-                    <option value="success:comment:add">success:comment:add</option>
-                    <option value="success:comment:edit">success:comment:edit</option>
-                    <option value="success:comment:remove">success:comment:remove</option>
-                </optgroup>
-                <optgroup label="Feedback">
-                    <option value="success:feedback:send">success:feedback:send</option>
-                    <option value="success:feedback:receive">success:comment:receive</option>
-                </optgroup>
-            </select>
-            <label for="id_lang">Language:</label>
-            <select id="id_lang" name="lang">
-                <option value="en_US" selected>English</option>
-                <option value="ru_RU">Russian</option>
-            </select>
-            <button type="submit">Translate</button>
-        </form>
-        <div id="id_result"></div>
-        <script>
-            var translateForm = document.getElementById('id_translate_form');
-            var resultDiv = document.getElementById('id_result');
-            var lang, params;
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="brand" href="#">Translate JS</a>
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li class="active"><a href="#">Demo</a></li>
+                  <li><a href="#about">Documentation</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div>
+          </div>
+        </div>
 
-            translateForm.onsubmit = function (e) {
-                lang = this.lang.value; 
-                params = this.params.value;
-                resultDiv.innerHTML = '<p>' + tr(params, lang) + '</p>';
-                return false;
-            };
+        <div class="container">
+            <h1>Translate-js</h1><hr>
+            <form name="translate-form" id="id_translate_form" class="form-inline" action="#">
+                <label for="id_params">Translate:</label>
+                <select id="id_params" name="params">
+                    <optgroup label="Comment">
+                        <option value="success:comment:add">success:comment:add</option>
+                        <option value="success:comment:edit">success:comment:edit</option>
+                        <option value="success:comment:remove">success:comment:remove</option>
+                    </optgroup>
+                    <optgroup label="Feedback">
+                        <option value="success:feedback:send">success:feedback:send</option>
+                        <option value="success:feedback:receive">success:comment:receive</option>
+                    </optgroup>
+                </select>
+                <label for="id_lang">Language:</label>
+                <select id="id_lang" name="lang">
+                    <option value="en_US" selected>English</option>
+                    <option value="ru_RU">Russian</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Translate</button>
+            </form>
+            <div id="id_result"></div>
+            <script>
+                var translateForm = document.getElementById('id_translate_form');
+                var resultDiv = document.getElementById('id_result');
+                var lang, params;
 
-        </script>
-        <h2>Translation</h2>
+                translateForm.onsubmit = function (e) {
+                    lang = this.lang.value; 
+                    params = this.params.value;
+                    resultDiv.innerHTML = '<p>' + tr(params, lang) + '</p>';
+                    return false;
+                };
+
+            </script>
+            <h2>Translation</h2>
+            <p>With default language:</p>
 <pre><code class="javascript">var translated = tr('success:comment:add');
 </code></pre>
 
-        <p>Or</p>
+            <p>With custom language:</p>
 
 <pre><code class="javascript">var translated = tr('success:comment:edit', 'ru_RU');
 </code></pre>
 
-    <h2>Define translations</h2>
+            <h2>Define translations</h2>
 <pre><code class="javascript">var settings = {}, messages = {};
 settings.lang = 'en_US';
 
@@ -117,5 +145,13 @@ messages.ru_RU = {
 };
 // End Russian translations */
 </code></pre>
+        </div> <!-- /container -->
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="./example.js"></script>
+        <script src="./translate.js"></script>
+
     </body>
 </html>

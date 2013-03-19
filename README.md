@@ -1,8 +1,6 @@
-# Translate-js
-
 # Demo
 
-[View demo][example.html]
+[View demo](example.html)
 
 ### Translation
 

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>translate-js demo examples</title>
+        <script src="./example.js"></script>
+        <script src="./translate.js"></script>
+    </head>
+    <body>
+        <form name="translate-form" id="id_translate_form" action="#">
+            <label for="id_params">Translate:</label>
+            <select id="id_params" name="params">
+                <optgroup label="Comment">
+                    <option value="success:comment:add">success:comment:add</option>
+                    <option value="success:comment:edit">success:comment:edit</option>
+                    <option value="success:comment:remove">success:comment:remove</option>
+                </optgroup>
+                <optgroup label="Feedback">
+                    <option value="success:feedback:send">success:feedback:send</option>
+                    <option value="success:feedback:receive">success:comment:receive</option>
+                </optgroup>
+            </select>
+            <label for="id_lang">Language:</label>
+            <select id="id_lang" name="lang">
+                <option value="en_US" selected>English</option>
+                <option value="ru_RU">Russian</option>
+            </select>
+            <button type="submit">Translate</button>
+        </form>
+        <div id="id_result"></div>
+        <script>
+            var translateForm = document.getElementById('id_translate_form');
+            var resultDiv = document.getElementById('id_result');
+            var lang, params;
+
+            translateForm.onsubmit = function (e) {
+                lang = this.lang.value; 
+                params = this.params.value;
+                resultDiv.innerHTML = '<p>' + tr(params, lang) + '</p>';
+                return false;
+            };
+
+        </script>
+    </body>
+</html>
